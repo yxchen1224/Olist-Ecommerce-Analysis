@@ -72,7 +72,32 @@ Olist-Ecommerce-Analysis/
 └── README.md       # 项目说明文档
 ```
 
-## 8. 数据与分析局限
+## 8. 数据获取与运行说明
+
+### 数据来源
+本项目使用公开的 Brazilian E-Commerce Public Dataset by Olist。
+
+原始 CSV 数据未上传至 GitHub，使用者需要自行获取数据，并将以下文件放入项目根目录的 `data/` 文件夹：
+
+- olist_orders_dataset.csv
+- olist_order_items_dataset.csv
+- olist_customers_dataset.csv
+- olist_products_dataset.csv
+- olist_order_reviews_dataset.csv
+
+### Python 运行环境
+需要安装 Python 和 Pandas：
+
+```bash
+pip install pandas
+```
+
+进入项目目录后，可以依次运行 `python/` 文件夹中的分析脚本。
+
+### SQL 与 Power BI
+SQL 脚本位于 `sql/` 文件夹；Power BI 报告位于 `powerbi/` 文件夹。使用者需要根据本地数据环境调整数据库连接及导入路径。
+
+## 9. 数据与分析局限
 
 - 数据来自历史订单记录，不能直接代表当前电商市场状况。
 - 观察期内复购率不等同于月度留存率。
@@ -80,8 +105,9 @@ Olist-Ecommerce-Analysis/
 - 数据缺少采购成本、营销费用、人工成本等信息，因此无法计算真实净利润。
 - 配送延迟与客户评价之间的关系属于相关性分析，不代表因果关系。
 
-## 9. 项目总结
+## 10. 项目总结
 
 本项目通过 Python、SQL 和 Power BI 完成从数据读取、数据处理、业务分析到可视化展示的分析流程。
 
 项目重点不只是展示数据指标，而是围绕实际经营问题进行分析，并将分析结果转化为可执行的业务建议。
+
